@@ -1,0 +1,51 @@
+*first need to instal git on the comp
+* #apt-get-install git
+* for ubuntu to get the latest:
+* #add-apt-repository ppa:git-core/ppa   # apt update; apt install git 
+in bash/ terminal or 
+
+*sudo apt-get install git
+  
+  $git init - sets up all the tools git needs to begin tracking changes made to the project
+
+  $git status - check the status of the chalnges
+
+  $git add filename - adding a file to the staging area
+
+  $git diff filename - cheking the diff b/w the working dir and staging area
+
+  $git commit -m "Message about the change" - permanently stores changes
+  
+  $git log - view commit history
+head commit - the most recently made commit, the one you are currently on
+  
+  $git show HEAD
+  
+  $git checkout HEAD filename - restores the file in the working dir, to look like it was before the commit
+  
+  $git add filename1 filename2 - we can add 2 diff files that we made changes to
+  
+  $git reset HEAD filename - resets the file in the staging area to be the same as the HEAD commit, it doesn't discard it from the working gir just removes from staging area
+  
+  $git reset commit_SHA - rewind to the part before made smth wrong(commit_SHA are the first 7 characters from the SHA of the commit we want to reset, we can find it in $git log)
+  
+  $git add . - adds all the files from the staging areas
+  
+  $git branch - to see which branch i am on(*shows the current branch)
+  
+  $git branch new_branch - create new branch
+  
+  $git checkout brach_name - switch to diff branch
+  
+  $git merge branch_name - including changes from the new to the master branch 
+  Merge conflict - if i make commit on master before the merge or if it was the same
+  
+  $git branch -D branch_name - deletes the specified branch
+  
+  $git clone remote_location clone_name - remote_location could be a web address or file name, clone_name is the name we give to the dir in which will clone the repository
+  
+  $git remote -v -to see a list of projects remotes
+  
+  $git fetch - to see if changes have been made to the remote and bring the changes to my local copy(fetch doesnt merge changes it brings them onto a remote branch)
+  
+  $git push origin your_branch_name - will push your branch to the remote
